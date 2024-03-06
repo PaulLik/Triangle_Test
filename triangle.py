@@ -19,12 +19,12 @@ def check_triangle(sides: list) -> str:
 if __name__ == "__main__":
 
     if len(sys.argv) != 4:
-        print("Ошибка данных: у треугольника 3 стороны")
+        print("Ошибка ввода данных: у треугольника 3 стороны")
         sys.exit()
 
     for s in sys.argv[1:]:
-        if s.isalpha() | int(s) == 0:
-            print("Ошибка! Длина строны не может быть строкой или нулём!")
+        if s.isalpha() | int(s) <= 0:
+            print("Ошибка! Длина строны должна быть положительным числом!")
             sys.exit()
     
     sides = [eval(sa) for sa in sys.argv[1:]]
